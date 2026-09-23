@@ -104,6 +104,22 @@
     {"id": "MITSUBISHI_MILEAGE_BEFORE_SERVICING",       "path": "Trips", "fmt": {           "len": 8, "max": 25500, "mul": 100, "unit": "kilometers" }, "name": "Mileage before servicing"},
     {"id": "MITSUBISHI_PERIOD_BEFORE_SERVICING_MONTHS", "path": "Trips", "fmt": {"bix": 32, "len": 8, "max": 255,               "unit": "scalar"     }, "name": "Months before servicing"}
   ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E25"}, "freq": 15,
+  "signals": [
+    {"id": "MITSUBISHI_BCM_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E26"}, "freq": 15,
+  "signals": [
+    {"id": "MITSUBISHI_BCM_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E27"}, "freq": 15,
+  "signals": [
+    {"id": "MITSUBISHI_BCM_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E28"}, "freq": 15,
+  "signals": [
+    {"id": "MITSUBISHI_BCM_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
 { "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A1"}, "freq": 15,
   "signals": [
     {"id": "MITSUBISHI_TPMS_TP_FL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
@@ -410,6 +426,54 @@
   "signals": [
     {"id": "MITSUBISHI_CLUTCH_1_SLIP_AT_VSS", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Clutch 1 slip speed"}
   ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1105"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_EGR_T_SNS_V_ECM", "path": "Engine", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "Exhaust gas recirculation temperature sensor voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1111"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_FUEL_T_DA18_1111_ECM", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1114"}, "freq": 30,
+  "signals": [
+    {"id": "MITSUBISHI_FLI_INPUT_DA18_1114_ECM", "path": "Fuel", "fmt": { "len": 8, "max": 10.2, "div": 25, "unit": "volts" }, "name": "Fuel level input"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1115"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_EVAP_PRES_SNS_V_ECM", "path": "Engine", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "EVAP pressure sensor voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "111F"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_EOT_ECM", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1207"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_BASE_INJECTION_TIMING_ECM", "path": "Engine", "fmt": { "len": 16, "max": 31.999511, "div": 2048, "unit": "milliseconds" }, "name": "Base injection timing"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "120C"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_FUEL_PRES_SNS_V_ECM", "path": "Fuel", "fmt": { "len": 16, "max": 20, "mul": 20, "div": 65535, "unit": "volts" }, "name": "Fuel pressure sensor voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "120D"}, "freq": 0.25,
+  "signals": [
+    {"id": "MITSUBISHI_ACCELERATOR_PEDAL_POSITION_SNS_1_VOLTS_ECM", "path": "Engine", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "volts" }, "name": "Accelerator pedal position sensor 1 voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "120E"}, "freq": 0.25,
+  "signals": [
+    {"id": "MITSUBISHI_ACCELERATOR_PEDAL_POSITION_SNS_2_VOLTS_ECM", "path": "Engine", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "volts" }, "name": "Accelerator pedal position sensor 2 voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "120F"}, "freq": 0.25,
+  "signals": [
+    {"id": "MITSUBISHI_THROTTLE_POSITION_SNS_1_VOLTS_ECM", "path": "Engine", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "volts" }, "name": "Throttle position sensor 1 voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "1210"}, "freq": 0.25,
+  "signals": [
+    {"id": "MITSUBISHI_THROTTLE_POSITION_SNS_2_VOLTS_ECM", "path": "Engine", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "volts" }, "name": "Throttle position sensor 2 voltage"}
+  ]},
+{ "hdr": "DA15", "dbg": true, "cmd": {"22": "121F"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_ROLL_OVER_SNS_V_ECM", "path": "Engine", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "volts" }, "name": "Roll-over sensor voltage"}
+  ]},
 { "hdr": "DA18", "dbg": true, "cmd": {"22": "1105"}, "freq": 5,
   "signals": [
     {"id": "MITSUBISHI_EGR_T_SNS_V", "path": "Engine", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "Exhaust gas recirculation temperature sensor voltage"}
@@ -428,7 +492,7 @@
   ]},
 { "hdr": "DA18", "dbg": true, "cmd": {"22": "111F"}, "freq": 5,
   "signals": [
-    {"id": "MITSUBISHI_EOT", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "MITSUBISHI_EOT", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Engine oil temperature"}
   ]},
 { "hdr": "DA18", "dbg": true, "cmd": {"22": "1207"}, "freq": 1,
   "signals": [
