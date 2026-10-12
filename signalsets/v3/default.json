@@ -35,6 +35,38 @@
     {"id": "MITSUBISHI_TT_SPARE",       "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Temperature spare tire"},
     {"id": "MITSUBISHI_CROSS_TT_SPARE", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50,                 "unit": "celsius" }, "name": "Temperature spare tire"}
   ]},
+{ "hdr": "600", "rax": "601", "fcm1": true, "dbg": true, "cmd": {"21": "0D"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_KEYLESS_BUTTON", "path": "Keys", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "scalar" }, "name": "Keyless operating system button"}
+  ]},
+{ "hdr": "61E", "rax": "61F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_1_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 1 module voltage"}
+  ]},
+{ "hdr": "62E", "rax": "62F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_2_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 2 module voltage"}
+  ]},
+{ "hdr": "63E", "rax": "63F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_3_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 3 module voltage"}
+  ]},
+{ "hdr": "64E", "rax": "64F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_4_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 4 module voltage"}
+  ]},
+{ "hdr": "65E", "rax": "65F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_5_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 5 module voltage"}
+  ]},
+{ "hdr": "66E", "rax": "66F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_6_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 6 module voltage"}
+  ]},
+{ "hdr": "67E", "rax": "67F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_7_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 7 module voltage"}
+  ]},
 { "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "10"}, "freq": 1,
   "signals": [
     {"id": "MITSUBISHI_AC_INTERIOR_T",     "path": "Climate", "fmt": {           "len": 8, "max": 47.75, "min": -16,             "div": 4,   "add": -16, "unit": "celsius" }, "name": "Interior temperature"},
@@ -98,6 +130,24 @@
     {"id": "MITSUBISHI_AC_FAN_M1_WORK_TIME", "path": "Climate", "fmt": {"bix": 40, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M1 work time"},
     {"id": "MITSUBISHI_AC_FAN_M2_WORK_TIME", "path": "Climate", "fmt": {"bix": 64, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M2 work time"}
   ]},
+{ "hdr": "688", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_AC_HV_I", "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 328,  "min": -327, "div": 100, "add": -327, "unit": "amps"  }, "name": "Climate high-voltage current"},
+    {"id": "MITSUBISHI_AC_HV_V", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 6553,              "div": 10,               "unit": "volts" }, "name": "Climate high-voltage voltage"}
+  ]},
+{ "hdr": "688", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"21": "25"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_AC_HEATER_STEP", "path": "Climate", "fmt": {          "len": 8, "max": 255,              "unit": "scalar" }, "name": "Electric heater step"},
+    {"id": "MITSUBISHI_AC_HEATER_P",    "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 10200, "mul": 40, "unit": "watts"  }, "name": "Electric heater power"}
+  ]},
+{ "hdr": "68E", "rax": "68F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_8_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 8 module voltage"}
+  ]},
+{ "hdr": "69E", "rax": "69F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_9_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 9 module voltage"}
+  ]},
 { "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 30,
   "signals": [
     {"id": "MITSUBISHI_FLI", "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 100, "add": -16, "unit": "percent" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
@@ -115,13 +165,38 @@
     {"id": "MITSUBISHI_MILEAGE_BEFORE_SERVICING",       "path": "Trips", "fmt": {           "len": 8, "max": 25500, "mul": 100, "unit": "kilometers" }, "name": "Mileage before servicing"},
     {"id": "MITSUBISHI_PERIOD_BEFORE_SERVICING_MONTHS", "path": "Trips", "fmt": {"bix": 32, "len": 8, "max": 255,               "unit": "scalar"     }, "name": "Months before servicing"}
   ]},
+{ "hdr": "6AE", "rax": "6AF", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_10_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 10 module voltage"}
+  ]},
+{ "hdr": "6BE", "rax": "6BF", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_CMU_11_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 11 module voltage"}
+  ]},
+{ "hdr": "718", "rax": "719", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_ACC_TARGETS", "path": "Cruise control", "fmt": {"bix": 64, "len": 8, "max": 255, "unit": "scalar" }, "name": "Adaptive cruise control targets"}
+  ]},
+{ "hdr": "71A", "rax": "71B", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_LDW_SUPPLY_V", "path": "Electrical", "fmt": { "len": 8, "max": 2.55, "div": 100, "unit": "volts" }, "name": "Lane departure warning supply voltage"}
+  ]},
+{ "hdr": "724", "rax": "725", "fcm1": true, "dbg": true, "cmd": {"21": "12"}, "freq": 30,
+  "signals": [
+    {"id": "MITSUBISHI_COMP_ODO", "path": "Climate", "fmt": { "len": 24, "max": 1677721, "div": 10, "unit": "kilometers" }, "name": "Electric compressor odometer"}
+  ]},
+{ "hdr": "73A", "rax": "73B", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_EV_SUPPLY_V", "path": "Battery", "fmt": {           "len": 16, "max": 655, "div": 100, "unit": "scalar" }, "name": "Electric vehicle unit supply voltage"},
+    {"id": "MITSUBISHI_EV_IG1_V",    "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 655, "div": 100, "unit": "scalar" }, "name": "Electric vehicle unit ignition 1 voltage"}
+  ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E00"}, "freq": 0.25,
   "signals": [
     {"id": "MITSUBISHI_SPD_OUTPUT", "path": "Movement", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Speed output"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E01"}, "freq": 30,
   "signals": [
-    {"id": "MITSUBISHI_ODO_743", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer"}
+    {"id": "MITSUBISHI_ODO_743", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E03"}, "freq": 1,
   "signals": [
@@ -149,7 +224,7 @@
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "F40D"}, "freq": 0.25,
   "signals": [
-    {"id": "MITSUBISHI_SPD_METER", "path": "Movement", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "kilometersPerHour" }, "name": "Speed meter"}
+    {"id": "MITSUBISHI_SPD_METER", "path": "Movement", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "kilometersPerHour" }, "name": "Speed meter", "suggestedMetric": "speed"}
   ]},
 { "hdr": "748", "rax": "768", "fcm1": true, "dbg": true, "cmd": {"22": "1002"}, "freq": 1,
   "signals": [
@@ -174,6 +249,139 @@
 { "hdr": "748", "rax": "768", "fcm1": true, "dbg": true, "cmd": {"22": "1106"}, "freq": 1,
   "signals": [
     {"id": "MITSUBISHI_T_F_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "T/F status"}
+  ]},
+{ "hdr": "753", "rax": "754", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_RMOT_COOLANT_T", "path": "Drivetrain", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Rear motor and inverter coolant temperature"}
+  ]},
+{ "hdr": "753", "rax": "754", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_RMOT_CAP_V", "path": "Drivetrain", "fmt": {"bix": 32, "len": 16, "max": 65535, "unit": "volts" }, "name": "Rear inverter capacitor voltage"}
+  ]},
+{ "hdr": "755", "rax": "756", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "MITSUBISHI_FMOT_COOLANT_T", "path": "Drivetrain", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor and inverter coolant temperature"}
+  ]},
+{ "hdr": "755", "rax": "756", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_FMOT_CAP_V",       "path": "Drivetrain", "fmt": {"bix": 32,  "len": 16, "max": 65535,                         "unit": "volts"   }, "name": "Front inverter capacitor voltage"},
+    {"id": "MITSUBISHI_FMOT_COIL_MAX_T",  "path": "Drivetrain", "fmt": {"bix": 64,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor coil maximum temperature"},
+    {"id": "MITSUBISHI_FMOT_IGBT_MAX_T",  "path": "Drivetrain", "fmt": {"bix": 72,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor maximum temperature"},
+    {"id": "MITSUBISHI_FMOT_CPU_T",       "path": "Drivetrain", "fmt": {"bix": 80,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter processor temperature"},
+    {"id": "MITSUBISHI_FMOT_IGBT_EST_T",  "path": "Drivetrain", "fmt": {"bix": 88,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor estimated temperature"},
+    {"id": "MITSUBISHI_FMOT_CAP_T",       "path": "Drivetrain", "fmt": {"bix": 96,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter capacitor temperature"},
+    {"id": "MITSUBISHI_FMOT_IGBT1_T",     "path": "Drivetrain", "fmt": {"bix": 176, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 1 temperature"},
+    {"id": "MITSUBISHI_FMOT_IGBT2_T",     "path": "Drivetrain", "fmt": {"bix": 184, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 2 temperature"},
+    {"id": "MITSUBISHI_FMOT_COIL_U_T",    "path": "Drivetrain", "fmt": {"bix": 192, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor u-phase coil temperature"},
+    {"id": "MITSUBISHI_FMOT_COIL_W_T",    "path": "Drivetrain", "fmt": {"bix": 200, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor w-phase coil temperature"},
+    {"id": "MITSUBISHI_FMOT_COOLANT_REQ", "path": "Drivetrain", "fmt": {"bix": 208, "len": 8,  "max": 255,                           "unit": "liters"  }, "name": "Front motor requested coolant flow"},
+    {"id": "MITSUBISHI_FMOT_CPU_TIME",    "path": "Drivetrain", "fmt": {"bix": 216, "len": 16, "max": 65535,                         "unit": "scalar"  }, "name": "Front inverter processor operating time"},
+    {"id": "MITSUBISHI_FMOT_SW_VER",      "path": "Drivetrain", "fmt": {"bix": 232, "len": 8,  "max": 255,                           "unit": "scalar"  }, "name": "Front motor controller software version"},
+    {"id": "MITSUBISHI_FMOT_IGBT3_T",     "path": "Drivetrain", "fmt": {"bix": 240, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 3 temperature"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_BMU_CELL_MAX_V",    "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Highest cell voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_MAX_ID",   "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 255,                "unit": "scalar"      }, "name": "Highest voltage cell number"},
+    {"id": "MITSUBISHI_BMU_CELL_MIN_V",    "path": "Battery", "fmt": {"bix": 40,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Lowest cell voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_MIN_ID",   "path": "Battery", "fmt": {"bix": 56,  "len": 8,  "max": 255,                "unit": "scalar"      }, "name": "Lowest voltage cell number"},
+    {"id": "MITSUBISHI_BMU_RES_MAX",       "path": "Battery", "fmt": {"bix": 200, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Highest cell internal resistance"},
+    {"id": "MITSUBISHI_BMU_RES_MIN",       "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Lowest cell internal resistance"},
+    {"id": "MITSUBISHI_BMU_CAP",           "path": "Battery", "fmt": {"bix": 216, "len": 16, "max": 6553,  "div": 10,   "unit": "ampereHours" }, "name": "Battery capacity"},
+    {"id": "MITSUBISHI_BMU_REM_CAP",       "path": "Battery", "fmt": {"bix": 232, "len": 16, "max": 6553,  "div": 10,   "unit": "ampereHours" }, "name": "Battery remaining capacity"},
+    {"id": "MITSUBISHI_BMU_MAX_IN_P",      "path": "Battery", "fmt": {"bix": 248, "len": 8,  "max": 63.75, "div": 4,    "unit": "kilowatts"   }, "name": "Maximum charging power"},
+    {"id": "MITSUBISHI_BMU_MAX_OUT_P",     "path": "Battery", "fmt": {"bix": 256, "len": 8,  "max": 63.75, "div": 4,    "unit": "kilowatts"   }, "name": "Maximum output power"},
+    {"id": "MITSUBISHI_BMU_CELL_DIFF_V",   "path": "Battery", "fmt": {"bix": 264, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Cell voltage difference"},
+    {"id": "MITSUBISHI_BMU_CELL_TGT_V",    "path": "Battery", "fmt": {"bix": 280, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Target cell voltage"},
+    {"id": "MITSUBISHI_BMU_OR_SUPPLY_V",   "path": "Battery", "fmt": {"bix": 296, "len": 8,  "max": 25.5,  "div": 10,   "unit": "volts"       }, "name": "Battery unit OR supply voltage"},
+    {"id": "MITSUBISHI_BMU_IGCT_SUPPLY_V", "path": "Battery", "fmt": {"bix": 304, "len": 8,  "max": 25.5,  "div": 10,   "unit": "volts"       }, "name": "Battery unit ignition supply voltage"},
+    {"id": "MITSUBISHI_BMU_FAN_DUTY",      "path": "Battery", "fmt": {"bix": 312, "len": 8,  "max": 255,                "unit": "percent"     }, "name": "Battery cooling fan duty"},
+    {"id": "MITSUBISHI_BMU_CELL_AVG_V",    "path": "Battery", "fmt": {"bix": 384, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Average cell voltage"},
+    {"id": "MITSUBISHI_BMU_DIFF_LIMIT_V",  "path": "Battery", "fmt": {"bix": 400, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Cell voltage difference fault limit"},
+    {"id": "MITSUBISHI_BMU_RES_DIFF_MAX",  "path": "Battery", "fmt": {"bix": 416, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Cell internal resistance difference maximum"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_BMU_CELL_01_V", "path": "Battery.Cells", "fmt": {             "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 1 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_02_V", "path": "Battery.Cells", "fmt": {"bix": 16,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 2 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_03_V", "path": "Battery.Cells", "fmt": {"bix": 32,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 3 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_04_V", "path": "Battery.Cells", "fmt": {"bix": 48,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 4 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_05_V", "path": "Battery.Cells", "fmt": {"bix": 64,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 5 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_06_V", "path": "Battery.Cells", "fmt": {"bix": 80,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 6 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_07_V", "path": "Battery.Cells", "fmt": {"bix": 96,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 7 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_08_V", "path": "Battery.Cells", "fmt": {"bix": 112,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 8 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_09_V", "path": "Battery.Cells", "fmt": {"bix": 128,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 9 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_10_V", "path": "Battery.Cells", "fmt": {"bix": 144,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 10 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_11_V", "path": "Battery.Cells", "fmt": {"bix": 160,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 11 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_12_V", "path": "Battery.Cells", "fmt": {"bix": 176,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 12 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_13_V", "path": "Battery.Cells", "fmt": {"bix": 192,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 13 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_14_V", "path": "Battery.Cells", "fmt": {"bix": 208,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 14 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_15_V", "path": "Battery.Cells", "fmt": {"bix": 224,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 15 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_16_V", "path": "Battery.Cells", "fmt": {"bix": 240,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 16 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_17_V", "path": "Battery.Cells", "fmt": {"bix": 256,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 17 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_18_V", "path": "Battery.Cells", "fmt": {"bix": 272,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 18 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_19_V", "path": "Battery.Cells", "fmt": {"bix": 288,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 19 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_20_V", "path": "Battery.Cells", "fmt": {"bix": 304,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 20 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_21_V", "path": "Battery.Cells", "fmt": {"bix": 320,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 21 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_22_V", "path": "Battery.Cells", "fmt": {"bix": 336,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 22 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_23_V", "path": "Battery.Cells", "fmt": {"bix": 352,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 23 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_24_V", "path": "Battery.Cells", "fmt": {"bix": 368,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 24 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_25_V", "path": "Battery.Cells", "fmt": {"bix": 384,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 25 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_26_V", "path": "Battery.Cells", "fmt": {"bix": 400,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 26 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_27_V", "path": "Battery.Cells", "fmt": {"bix": 416,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 27 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_28_V", "path": "Battery.Cells", "fmt": {"bix": 432,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 28 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_29_V", "path": "Battery.Cells", "fmt": {"bix": 448,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 29 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_30_V", "path": "Battery.Cells", "fmt": {"bix": 464,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 30 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_31_V", "path": "Battery.Cells", "fmt": {"bix": 480,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 31 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_32_V", "path": "Battery.Cells", "fmt": {"bix": 496,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 32 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_33_V", "path": "Battery.Cells", "fmt": {"bix": 512,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 33 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_34_V", "path": "Battery.Cells", "fmt": {"bix": 528,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 34 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_35_V", "path": "Battery.Cells", "fmt": {"bix": 544,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 35 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_36_V", "path": "Battery.Cells", "fmt": {"bix": 560,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 36 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_37_V", "path": "Battery.Cells", "fmt": {"bix": 576,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 37 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_38_V", "path": "Battery.Cells", "fmt": {"bix": 592,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 38 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_39_V", "path": "Battery.Cells", "fmt": {"bix": 608,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 39 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_40_V", "path": "Battery.Cells", "fmt": {"bix": 624,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 40 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_41_V", "path": "Battery.Cells", "fmt": {"bix": 640,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 41 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_42_V", "path": "Battery.Cells", "fmt": {"bix": 656,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 42 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_43_V", "path": "Battery.Cells", "fmt": {"bix": 672,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 43 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_44_V", "path": "Battery.Cells", "fmt": {"bix": 688,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 44 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_45_V", "path": "Battery.Cells", "fmt": {"bix": 704,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 45 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_46_V", "path": "Battery.Cells", "fmt": {"bix": 720,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 46 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_47_V", "path": "Battery.Cells", "fmt": {"bix": 736,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 47 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_48_V", "path": "Battery.Cells", "fmt": {"bix": 752,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 48 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_49_V", "path": "Battery.Cells", "fmt": {"bix": 768,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 49 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_50_V", "path": "Battery.Cells", "fmt": {"bix": 784,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 50 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_51_V", "path": "Battery.Cells", "fmt": {"bix": 800,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 51 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_52_V", "path": "Battery.Cells", "fmt": {"bix": 816,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 52 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_53_V", "path": "Battery.Cells", "fmt": {"bix": 832,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 53 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_54_V", "path": "Battery.Cells", "fmt": {"bix": 848,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 54 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_55_V", "path": "Battery.Cells", "fmt": {"bix": 864,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 55 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_56_V", "path": "Battery.Cells", "fmt": {"bix": 880,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 56 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_57_V", "path": "Battery.Cells", "fmt": {"bix": 896,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 57 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_58_V", "path": "Battery.Cells", "fmt": {"bix": 912,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 58 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_59_V", "path": "Battery.Cells", "fmt": {"bix": 928,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 59 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_60_V", "path": "Battery.Cells", "fmt": {"bix": 944,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 60 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_61_V", "path": "Battery.Cells", "fmt": {"bix": 960,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 61 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_62_V", "path": "Battery.Cells", "fmt": {"bix": 976,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 62 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_63_V", "path": "Battery.Cells", "fmt": {"bix": 992,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 63 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_64_V", "path": "Battery.Cells", "fmt": {"bix": 1008, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 64 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_65_V", "path": "Battery.Cells", "fmt": {"bix": 1024, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 65 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_66_V", "path": "Battery.Cells", "fmt": {"bix": 1040, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 66 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_67_V", "path": "Battery.Cells", "fmt": {"bix": 1056, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 67 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_68_V", "path": "Battery.Cells", "fmt": {"bix": 1072, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 68 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_69_V", "path": "Battery.Cells", "fmt": {"bix": 1088, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 69 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_70_V", "path": "Battery.Cells", "fmt": {"bix": 1104, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 70 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_71_V", "path": "Battery.Cells", "fmt": {"bix": 1120, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 71 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_72_V", "path": "Battery.Cells", "fmt": {"bix": 1136, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 72 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_73_V", "path": "Battery.Cells", "fmt": {"bix": 1152, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 73 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_74_V", "path": "Battery.Cells", "fmt": {"bix": 1168, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 74 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_75_V", "path": "Battery.Cells", "fmt": {"bix": 1184, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 75 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_76_V", "path": "Battery.Cells", "fmt": {"bix": 1200, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 76 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_77_V", "path": "Battery.Cells", "fmt": {"bix": 1216, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 77 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_78_V", "path": "Battery.Cells", "fmt": {"bix": 1232, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 78 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_79_V", "path": "Battery.Cells", "fmt": {"bix": 1248, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 79 voltage"},
+    {"id": "MITSUBISHI_BMU_CELL_80_V", "path": "Battery.Cells", "fmt": {"bix": 1264, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 80 voltage"}
   ]},
 { "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "14"}, "freq": 1,
   "signals": [
@@ -200,6 +408,11 @@
     {"id": "MITSUBISHI_DBCAM8_ODO_RAW_CNT",  "path": "Trips", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM8 odometer, raw count"},
     {"id": "MITSUBISHI_DBCAM9_ODO_RAW_CNT",  "path": "Trips", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM9 odometer, raw count"},
     {"id": "MITSUBISHI_DBCAM10_ODO_RAW_CNT", "path": "Trips", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM10 odometer, raw count"}
+  ]},
+{ "hdr": "765", "rax": "766", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_OBC_CHG_CNT_100V", "path": "Battery", "fmt": {           "len": 16, "max": 65535, "unit": "scalar" }, "name": "Charge count at 100 v"},
+    {"id": "MITSUBISHI_OBC_CHG_CNT_200V", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Charge count at 200 v"}
   ]},
 { "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A1"}, "freq": 15,
   "signals": [
@@ -584,6 +797,18 @@
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "A6"}, "freq": 0.25,
   "signals": [
     {"id": "MITSUBISHI_CLUTCH_1_SLIP_AT_VSS", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Clutch 1 slip speed"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"21": "03"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_EV_BRAKE_P", "path": "Control", "fmt": {"bix": 104, "len": 8, "max": 255, "unit": "bars" }, "name": "Brake pressure"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"21": "24"}, "freq": 1,
+  "signals": [
+    {"id": "MITSUBISHI_EV_SEL_P", "path": "Drivetrain", "fmt": {"bix": 24, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in p"},
+    {"id": "MITSUBISHI_EV_SEL_R", "path": "Drivetrain", "fmt": {"bix": 25, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in r"},
+    {"id": "MITSUBISHI_EV_SEL_N", "path": "Drivetrain", "fmt": {"bix": 26, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in n"},
+    {"id": "MITSUBISHI_EV_SEL_D", "path": "Drivetrain", "fmt": {"bix": 27, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in d"},
+    {"id": "MITSUBISHI_EV_SEL_B", "path": "Drivetrain", "fmt": {"bix": 28, "len": 4, "max": 15, "unit": "scalar" }, "name": "Regenerative braking level"}
   ]},
 { "hdr": "DA15", "rax": "15", "dbg": true, "cmd": {"22": "1105"}, "freq": 5,
   "signals": [
