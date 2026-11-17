@@ -81,8 +81,9 @@
   ]},
 { "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "13"}, "freq": 0.25,
   "signals": [
-    {"id": "MITSUBISHI_AC_RPM", "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 7000, "unit": "rpm"               }, "name": "Engine RPM",    "suggestedMetric": "engineSpeed"},
-    {"id": "MITSUBISHI_AC_VSS", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 250,  "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+    {"id": "MITSUBISHI_AC_RPM",       "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 7000,             "unit": "rpm"               }, "name": "Engine RPM",    "suggestedMetric": "engineSpeed"},
+    {"id": "MITSUBISHI_AC_VSS",       "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 250,  "div": 128, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"},
+    {"id": "MITSUBISHI_CROSS_AC_VSS", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 250,              "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
 { "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "22"}, "freq": 5,
   "signals": [
